@@ -1,0 +1,15 @@
+platform :ios, '10.0'
+source 'https://github.com/CocoaPods/Specs.git'
+
+target 'worldAirports' do
+
+  use_frameworks!
+  pod 'Moya'
+  pod 'RealmSwift'
+
+  target 'worldAirportsTests' do
+    inherit! :search_paths
+    pod 'Moya'
+  end
+
+end

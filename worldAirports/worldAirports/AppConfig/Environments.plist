@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Release</key>
+	<dict>
+		<key>base-url</key>
+		<string>https://api.lufthansa.com/v1</string>
+		<key>api-key</key>
+		<string>w8jx4qyb5a69fwkpu83u7qw8</string>
+	</dict>
+	<key>Debug</key>
+	<dict>
+		<key>base-url</key>
+		<string>https://api.lufthansa.com/v1</string>
+		<key>api-key</key>
+		<string>w8jx4qyb5a69fwkpu83u7qw8</string>
+		<key>client_secret</key>
+		<string>7JTNSwKpg3</string>
+	</dict>
+</dict>
+</plist>
