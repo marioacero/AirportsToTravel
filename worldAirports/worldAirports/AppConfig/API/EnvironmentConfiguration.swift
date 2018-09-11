@@ -20,6 +20,11 @@ class EnvironmentConfiguration {
     var configurationPath : String!
     var servicesKeys : NSDictionary!
     
+    static var accesToken: String? {
+        let authData = RealmManager.shared.getAll(Class: AuthRealm.self).first
+        return authData?.accesToken
+    }
+    
     static let shared = EnvironmentConfiguration()
     init() {
         let bundle = Bundle(for: type(of: self))

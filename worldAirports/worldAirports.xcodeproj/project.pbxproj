@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		34194FABE7DAF7AE86953D8B /* Pods_worldAirports.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9466D2627BE16A50FCEF82DD /* Pods_worldAirports.framework */; };
 		A7C1DF08B648DA9062AA38D0 /* Pods_worldAirportsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23E16B8EFBB664DB0D613C78 /* Pods_worldAirportsTests.framework */; };
+		DC03B9D021476C0100702374 /* AirportsRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC03B9CF21476C0100702374 /* AirportsRealm.swift */; };
+		DC59E84B214884C50010B239 /* AirPortsSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC59E84A214884C50010B239 /* AirPortsSearchViewController.swift */; };
+		DC59E84F21488A610010B239 /* AutoCompleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC59E84D21488A610010B239 /* AutoCompleteViewController.swift */; };
+		DC59E85021488A610010B239 /* AutoCompleteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC59E84E21488A610010B239 /* AutoCompleteViewController.xib */; };
+		DC59E85221488B240010B239 /* AutoCompleteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC59E85121488B240010B239 /* AutoCompleteViewModel.swift */; };
 		DC6AFAD321440C820008E0E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6AFAD221440C820008E0E1 /* AppDelegate.swift */; };
 		DC6AFAD521440C820008E0E1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6AFAD421440C820008E0E1 /* ViewController.swift */; };
 		DC6AFAD821440C820008E0E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC6AFAD621440C820008E0E1 /* Main.storyboard */; };
@@ -22,6 +27,13 @@
 		DC6AFAFC21442BD60008E0E1 /* EndPointsConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6AFAFB21442BD60008E0E1 /* EndPointsConfiguration.swift */; };
 		DC6AFAFF21442E530008E0E1 /* NetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6AFAFE21442E530008E0E1 /* NetworkProvider.swift */; };
 		DC6AFB0121442EA50008E0E1 /* NetworkAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6AFB0021442EA50008E0E1 /* NetworkAPI.swift */; };
+		DC6AFB092145D0760008E0E1 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6AFB082145D0760008E0E1 /* LaunchViewController.swift */; };
+		DC6AFB0B2145D0A70008E0E1 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6AFB0A2145D0A70008E0E1 /* AppConstants.swift */; };
+		DC6AFB0D2145D1000008E0E1 /* LaunchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6AFB0C2145D1000008E0E1 /* LaunchViewModel.swift */; };
+		DC6AFB0F2145D2990008E0E1 /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6AFB0E2145D2990008E0E1 /* Auth.swift */; };
+		DC6AFB122145D5FB0008E0E1 /* AuthRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6AFB112145D5FB0008E0E1 /* AuthRealm.swift */; };
+		DC6AFB162145D66B0008E0E1 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6AFB152145D66B0008E0E1 /* RealmManager.swift */; };
+		DC6AFB182145E0B50008E0E1 /* AirPort.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6AFB172145E0B50008E0E1 /* AirPort.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +52,11 @@
 		5446C97C174EAA88B3FCE29A /* Pods-worldAirports.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-worldAirports.debug.xcconfig"; path = "Pods/Target Support Files/Pods-worldAirports/Pods-worldAirports.debug.xcconfig"; sourceTree = "<group>"; };
 		9466D2627BE16A50FCEF82DD /* Pods_worldAirports.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_worldAirports.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1E99809259BAB1C47DD1A03 /* Pods-worldAirports.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-worldAirports.release.xcconfig"; path = "Pods/Target Support Files/Pods-worldAirports/Pods-worldAirports.release.xcconfig"; sourceTree = "<group>"; };
+		DC03B9CF21476C0100702374 /* AirportsRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportsRealm.swift; sourceTree = "<group>"; };
+		DC59E84A214884C50010B239 /* AirPortsSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirPortsSearchViewController.swift; sourceTree = "<group>"; };
+		DC59E84D21488A610010B239 /* AutoCompleteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoCompleteViewController.swift; sourceTree = "<group>"; };
+		DC59E84E21488A610010B239 /* AutoCompleteViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AutoCompleteViewController.xib; sourceTree = "<group>"; };
+		DC59E85121488B240010B239 /* AutoCompleteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoCompleteViewModel.swift; sourceTree = "<group>"; };
 		DC6AFACF21440C820008E0E1 /* worldAirports.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = worldAirports.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC6AFAD221440C820008E0E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DC6AFAD421440C820008E0E1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -57,6 +74,13 @@
 		DC6AFAFB21442BD60008E0E1 /* EndPointsConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointsConfiguration.swift; sourceTree = "<group>"; };
 		DC6AFAFE21442E530008E0E1 /* NetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProvider.swift; sourceTree = "<group>"; };
 		DC6AFB0021442EA50008E0E1 /* NetworkAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkAPI.swift; sourceTree = "<group>"; };
+		DC6AFB082145D0760008E0E1 /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
+		DC6AFB0A2145D0A70008E0E1 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		DC6AFB0C2145D1000008E0E1 /* LaunchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewModel.swift; sourceTree = "<group>"; };
+		DC6AFB0E2145D2990008E0E1 /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
+		DC6AFB112145D5FB0008E0E1 /* AuthRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRealm.swift; sourceTree = "<group>"; };
+		DC6AFB152145D66B0008E0E1 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
+		DC6AFB172145E0B50008E0E1 /* AirPort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirPort.swift; sourceTree = "<group>"; };
 		FEE5A2122B3BA2380EC92D09 /* Pods-worldAirportsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-worldAirportsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-worldAirportsTests/Pods-worldAirportsTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -100,6 +124,16 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		DC59E84C21488A4F0010B239 /* AutoComplete */ = {
+			isa = PBXGroup;
+			children = (
+				DC59E85121488B240010B239 /* AutoCompleteViewModel.swift */,
+				DC59E84D21488A610010B239 /* AutoCompleteViewController.swift */,
+				DC59E84E21488A610010B239 /* AutoCompleteViewController.xib */,
+			);
+			path = AutoComplete;
+			sourceTree = "<group>";
+		};
 		DC6AFAC621440C820008E0E1 = {
 			isa = PBXGroup;
 			children = (
@@ -123,9 +157,11 @@
 		DC6AFAD121440C820008E0E1 /* worldAirports */ = {
 			isa = PBXGroup;
 			children = (
+				DC6AFB042144CEC60008E0E1 /* ViewModels */,
+				DC6AFB032144CEBF0008E0E1 /* Views */,
+				DC6AFB022144CEB40008E0E1 /* Models */,
 				DC6AFAFD21442E390008E0E1 /* Networking */,
 				DC6AFAF22144131B0008E0E1 /* AppConfig */,
-				DC6AFAD221440C820008E0E1 /* AppDelegate.swift */,
 				DC6AFAD421440C820008E0E1 /* ViewController.swift */,
 				DC6AFAD621440C820008E0E1 /* Main.storyboard */,
 				DC6AFAD921440C850008E0E1 /* Assets.xcassets */,
@@ -147,11 +183,10 @@
 		DC6AFAF22144131B0008E0E1 /* AppConfig */ = {
 			isa = PBXGroup;
 			children = (
-				DC6AFAF7214414920008E0E1 /* Network.swift */,
-				DC6AFAF32144133B0008E0E1 /* Environments.plist */,
-				DC6AFAF9214418BD0008E0E1 /* EnvironmentConfiguration.swift */,
-				DC6AFAF52144134D0008E0E1 /* EndPoints.plist */,
-				DC6AFAFB21442BD60008E0E1 /* EndPointsConfiguration.swift */,
+				DC6AFB142145D6510008E0E1 /* Realm */,
+				DC6AFB132145D6440008E0E1 /* API */,
+				DC6AFAD221440C820008E0E1 /* AppDelegate.swift */,
+				DC6AFB0A2145D0A70008E0E1 /* AppConstants.swift */,
 			);
 			path = AppConfig;
 			sourceTree = "<group>";
@@ -163,6 +198,71 @@
 				DC6AFB0021442EA50008E0E1 /* NetworkAPI.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		DC6AFB022144CEB40008E0E1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DC6AFB102145D5490008E0E1 /* Realm Objects */,
+				DC6AFB0E2145D2990008E0E1 /* Auth.swift */,
+				DC6AFB172145E0B50008E0E1 /* AirPort.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DC6AFB032144CEBF0008E0E1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DC59E84C21488A4F0010B239 /* AutoComplete */,
+				DC6AFB052145D0380008E0E1 /* MainView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DC6AFB042144CEC60008E0E1 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				DC6AFB0C2145D1000008E0E1 /* LaunchViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		DC6AFB052145D0380008E0E1 /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				DC6AFB082145D0760008E0E1 /* LaunchViewController.swift */,
+				DC59E84A214884C50010B239 /* AirPortsSearchViewController.swift */,
+			);
+			path = MainView;
+			sourceTree = "<group>";
+		};
+		DC6AFB102145D5490008E0E1 /* Realm Objects */ = {
+			isa = PBXGroup;
+			children = (
+				DC6AFB112145D5FB0008E0E1 /* AuthRealm.swift */,
+				DC03B9CF21476C0100702374 /* AirportsRealm.swift */,
+			);
+			path = "Realm Objects";
+			sourceTree = "<group>";
+		};
+		DC6AFB132145D6440008E0E1 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				DC6AFAF7214414920008E0E1 /* Network.swift */,
+				DC6AFAF32144133B0008E0E1 /* Environments.plist */,
+				DC6AFAF9214418BD0008E0E1 /* EnvironmentConfiguration.swift */,
+				DC6AFAF52144134D0008E0E1 /* EndPoints.plist */,
+				DC6AFAFB21442BD60008E0E1 /* EndPointsConfiguration.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		DC6AFB142145D6510008E0E1 /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				DC6AFB152145D66B0008E0E1 /* RealmManager.swift */,
+			);
+			path = Realm;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,6 +350,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC59E85021488A610010B239 /* AutoCompleteViewController.xib in Resources */,
 				DC6AFAF42144133B0008E0E1 /* Environments.plist in Resources */,
 				DC6AFAF62144134D0008E0E1 /* EndPoints.plist in Resources */,
 				DC6AFADD21440C850008E0E1 /* LaunchScreen.storyboard in Resources */,
@@ -359,13 +460,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC6AFB162145D66B0008E0E1 /* RealmManager.swift in Sources */,
 				DC6AFAFC21442BD60008E0E1 /* EndPointsConfiguration.swift in Sources */,
+				DC6AFB122145D5FB0008E0E1 /* AuthRealm.swift in Sources */,
+				DC6AFB0B2145D0A70008E0E1 /* AppConstants.swift in Sources */,
 				DC6AFAD521440C820008E0E1 /* ViewController.swift in Sources */,
+				DC6AFB0D2145D1000008E0E1 /* LaunchViewModel.swift in Sources */,
 				DC6AFAD321440C820008E0E1 /* AppDelegate.swift in Sources */,
 				DC6AFB0121442EA50008E0E1 /* NetworkAPI.swift in Sources */,
+				DC59E85221488B240010B239 /* AutoCompleteViewModel.swift in Sources */,
+				DC03B9D021476C0100702374 /* AirportsRealm.swift in Sources */,
+				DC6AFB0F2145D2990008E0E1 /* Auth.swift in Sources */,
 				DC6AFAFA214418BD0008E0E1 /* EnvironmentConfiguration.swift in Sources */,
 				DC6AFAF8214414920008E0E1 /* Network.swift in Sources */,
+				DC6AFB182145E0B50008E0E1 /* AirPort.swift in Sources */,
 				DC6AFAFF21442E530008E0E1 /* NetworkProvider.swift in Sources */,
+				DC59E84B214884C50010B239 /* AirPortsSearchViewController.swift in Sources */,
+				DC6AFB092145D0760008E0E1 /* LaunchViewController.swift in Sources */,
+				DC59E84F21488A610010B239 /* AutoCompleteViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

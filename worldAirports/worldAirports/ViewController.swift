@@ -12,10 +12,6 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let a = NetworkProvider()
-        a.sendRequest { (resp) in
-            print(resp)
-        }
         // Do any additional setup after loading the view, typically from a nib.
     }
 

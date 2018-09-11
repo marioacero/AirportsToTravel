@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+import Result
 import Moya
 
 typealias NetworkCustomClosure = (NetworkAPI) -> Endpoint
@@ -24,9 +24,34 @@ class NetworkProvider: Network {
         provider = MoyaProvider<NetworkAPI>(endpointClosure: customClosure!, stubClosure: MoyaProvider.immediatelyStub)
     }
     
-    func sendRequest(completion: @escaping (ApiServiceResponse)->()){
-        provider.request(.getToken()) { (response) in
-            print(response)
+    func getAccesToken(completion: @escaping ApiServiceResponseClosure) {
+        provider.request(.getToken()) { [weak self] (response) in
+            guard let strongSelf = self else {
+                completion(.failure(error: nil))
+                return
+            }
+            
+            strongSelf.validateResponse(response: response, completion: completion)
+        }
+    }
+    
+    func getAirPorts(offset: Int, completion: @escaping ApiServiceResponseClosure) {
+        provider.request(.getAirports(offSet: offset)) { [weak self] (response) in
+            guard let strongSelf = self else {
+                completion(.failure(error: nil))
+                return
+            }
+            
+            strongSelf.validateResponse(response: response, completion: completion)
+        }
+    }
+    
+    private func validateResponse( response: Result<Moya.Response, MoyaError>, completion: @escaping ApiServiceResponseClosure) {
+        switch response {
+        case .success(let result):
+            completion(.success(response: result))
+        case .failure(let error):
+            completion(.failure(error: error))
         }
     }
 }
