@@ -11,6 +11,7 @@ import Foundation
 struct BasicKeys {
     static let Oauth = "Oauth"
     static let References = "References"
+    static let Operations = "Operations"
     
     struct OauthKeys {
         static let getToken = "getToken"
@@ -18,6 +19,10 @@ struct BasicKeys {
     
     struct ReferencesKeys {
         static let getAirPorts = "getAirPorts"
+    }
+    
+    struct OperationsKeys {
+        static let getSchedule = "getSchedule"
     }
 }
 
@@ -43,8 +48,6 @@ class EndPointsConfiguration: NSObject {
         let bundle = Bundle(for: type(of: self))
         let servicesPath = bundle.path(forResource: Constants.endpointFile, ofType: Constants.endPointExtension)
         let configurationsDic = NSDictionary(contentsOfFile: servicesPath!)
-        print("a")
-//        self.servicesKeys = configurationsDic?.object(forKey: basicKeys.services) as! NSDictionary
         self.servicesKeys = configurationsDic!
     }
     

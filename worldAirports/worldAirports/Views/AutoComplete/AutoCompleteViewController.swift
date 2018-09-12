@@ -8,7 +8,11 @@
 
 import UIKit
 
-class AutoCompleteViewController: UIViewController, UITableViewDelegate {
+protocol AutoCompleteDelegate: class {
+    func selectAirport(airPort: AirportsRealm )
+}
+
+class AutoCompleteViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -16,24 +20,47 @@ class AutoCompleteViewController: UIViewController, UITableViewDelegate {
         return AutoCompleteViewModel()
     }()
     
+    weak var autoCompleteDelegate: AutoCompleteDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
-        
+        tableView.dataSource = self
+        tableView.tableFooterView = UIView()
+        setDataBinding()
     }
-
     
-
+    func setDataBinding() {
+        viewModel.reloadData = { [weak self] in
+            guard let strongSelf = self else { return }
+            
+            strongSelf.tableView.reloadData()
+        }
+    }
 }
 
-extension AutoCompleteViewController: UITableViewDataSource {
+extension AutoCompleteViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        <#code#>
+        return viewModel.dataSource.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        let cell:UITableViewCell=UITableViewCell(style: UITableViewCellStyle.subtitle, reuseIdentifier: "mycell")
+        let row = viewModel.dataSource[indexPath.row]
+        
+        cell.textLabel?.text = row.name
+        cell.backgroundColor = UIColor.init(red: 235/255, green: 235/255, blue: 235/255, alpha: 1)
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let rowSelected = viewModel.dataSource[indexPath.row]
+        autoCompleteDelegate?.selectAirport(airPort: rowSelected)
     }
 }
 

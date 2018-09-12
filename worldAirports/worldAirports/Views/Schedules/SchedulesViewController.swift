@@ -1,5 +1,5 @@
 //
-//  AirPortsSearchViewController.swift
+//  SchedulesViewController.swift
 //  worldAirports
 //
 //  Created by Mario Acero on 9/11/18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AirPortsSearchViewController: UIViewController {
+class SchedulesViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

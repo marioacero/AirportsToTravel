@@ -12,6 +12,7 @@ import Moya
 enum NetworkAPI {
     case getToken()
     case getAirports(offSet: Int)
+    case getSchedule(depart: String, arrive: String, date: String)
 }
 
 extension NetworkAPI: TargetType {
@@ -27,6 +28,9 @@ extension NetworkAPI: TargetType {
             return EndPointsConfiguration.sharedInstance.getPath(endPointPath: BasicKeys.Oauth, endPointKey: BasicKeys.OauthKeys.getToken)
         case .getAirports:
             return EndPointsConfiguration.sharedInstance.getPath(endPointPath: BasicKeys.References, endPointKey: BasicKeys.ReferencesKeys.getAirPorts)
+        case .getSchedule(let departCode, let arriveCode, let date):
+            let URl = EndPointsConfiguration.sharedInstance.getPath(endPointPath: BasicKeys.Operations, endPointKey: BasicKeys.OperationsKeys.getSchedule)
+            return String(format: URl, departCode, arriveCode, date)
         }
     }
     
@@ -34,7 +38,7 @@ extension NetworkAPI: TargetType {
         switch self {
         case .getToken:
             return .post
-        case .getAirports:
+        case .getAirports, .getSchedule :
             return .get
         }
         
@@ -46,6 +50,8 @@ extension NetworkAPI: TargetType {
             return "{success data }".data(using: String.Encoding.utf8)!
         case .getAirports:
             return "{success data }".data(using: String.Encoding.utf8)!
+        case .getSchedule:
+            return "{success data }".data(using: String.Encoding.utf8)!
         }
     }
     
@@ -55,6 +61,8 @@ extension NetworkAPI: TargetType {
             return "{failure data test}".data(using: String.Encoding.utf8)!
         case .getAirports:
             return "{failure data test}".data(using: String.Encoding.utf8)!
+        case .getSchedule:
+            return "{failure data }".data(using: String.Encoding.utf8)!
         }
     }
     
@@ -71,6 +79,8 @@ extension NetworkAPI: TargetType {
         case .getAirports(let offset):
             return .requestParameters(parameters: ["limit": 100,
                                                    "offset": offset ], encoding: URLEncoding.queryString )
+        case .getSchedule:
+            return .requestParameters(parameters: ["directFlights": 1 ], encoding: URLEncoding.queryString )
         }
     }
     
@@ -78,7 +88,7 @@ extension NetworkAPI: TargetType {
         switch self {
         case .getToken:
             return ["Content-Type": "application/x-www-form-urlencoded"]
-        case .getAirports:
+        case .getAirports, .getSchedule:
             return ["Accept": "application/json",
                     "Authorization" : "Bearer \(EnvironmentConfiguration.accesToken!)"
             ]

@@ -34,6 +34,8 @@
 		DC6AFB122145D5FB0008E0E1 /* AuthRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6AFB112145D5FB0008E0E1 /* AuthRealm.swift */; };
 		DC6AFB162145D66B0008E0E1 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6AFB152145D66B0008E0E1 /* RealmManager.swift */; };
 		DC6AFB182145E0B50008E0E1 /* AirPort.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6AFB172145E0B50008E0E1 /* AirPort.swift */; };
+		DC6E2FCC2148B14D006A90C5 /* AirPortSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6E2FCB2148B14D006A90C5 /* AirPortSearchViewModel.swift */; };
+		DC6E2FCF2148D3E3006A90C5 /* SchedulesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6E2FCE2148D3E3006A90C5 /* SchedulesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +83,8 @@
 		DC6AFB112145D5FB0008E0E1 /* AuthRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRealm.swift; sourceTree = "<group>"; };
 		DC6AFB152145D66B0008E0E1 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		DC6AFB172145E0B50008E0E1 /* AirPort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirPort.swift; sourceTree = "<group>"; };
+		DC6E2FCB2148B14D006A90C5 /* AirPortSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirPortSearchViewModel.swift; sourceTree = "<group>"; };
+		DC6E2FCE2148D3E3006A90C5 /* SchedulesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchedulesViewController.swift; sourceTree = "<group>"; };
 		FEE5A2122B3BA2380EC92D09 /* Pods-worldAirportsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-worldAirportsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-worldAirportsTests/Pods-worldAirportsTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -163,7 +167,6 @@
 				DC6AFAFD21442E390008E0E1 /* Networking */,
 				DC6AFAF22144131B0008E0E1 /* AppConfig */,
 				DC6AFAD421440C820008E0E1 /* ViewController.swift */,
-				DC6AFAD621440C820008E0E1 /* Main.storyboard */,
 				DC6AFAD921440C850008E0E1 /* Assets.xcassets */,
 				DC6AFADB21440C850008E0E1 /* LaunchScreen.storyboard */,
 				DC6AFADE21440C850008E0E1 /* Info.plist */,
@@ -213,6 +216,7 @@
 		DC6AFB032144CEBF0008E0E1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				DC6E2FCD2148D3CC006A90C5 /* Schedules */,
 				DC59E84C21488A4F0010B239 /* AutoComplete */,
 				DC6AFB052145D0380008E0E1 /* MainView */,
 			);
@@ -222,7 +226,6 @@
 		DC6AFB042144CEC60008E0E1 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				DC6AFB0C2145D1000008E0E1 /* LaunchViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -230,8 +233,9 @@
 		DC6AFB052145D0380008E0E1 /* MainView */ = {
 			isa = PBXGroup;
 			children = (
-				DC6AFB082145D0760008E0E1 /* LaunchViewController.swift */,
-				DC59E84A214884C50010B239 /* AirPortsSearchViewController.swift */,
+				DC6E2FCA2148B12C006A90C5 /* AirPortSearch */,
+				DC6E2FC92148B120006A90C5 /* Launch */,
+				DC6AFAD621440C820008E0E1 /* Main.storyboard */,
 			);
 			path = MainView;
 			sourceTree = "<group>";
@@ -263,6 +267,32 @@
 				DC6AFB152145D66B0008E0E1 /* RealmManager.swift */,
 			);
 			path = Realm;
+			sourceTree = "<group>";
+		};
+		DC6E2FC92148B120006A90C5 /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				DC6AFB082145D0760008E0E1 /* LaunchViewController.swift */,
+				DC6AFB0C2145D1000008E0E1 /* LaunchViewModel.swift */,
+			);
+			path = Launch;
+			sourceTree = "<group>";
+		};
+		DC6E2FCA2148B12C006A90C5 /* AirPortSearch */ = {
+			isa = PBXGroup;
+			children = (
+				DC59E84A214884C50010B239 /* AirPortsSearchViewController.swift */,
+				DC6E2FCB2148B14D006A90C5 /* AirPortSearchViewModel.swift */,
+			);
+			path = AirPortSearch;
+			sourceTree = "<group>";
+		};
+		DC6E2FCD2148D3CC006A90C5 /* Schedules */ = {
+			isa = PBXGroup;
+			children = (
+				DC6E2FCE2148D3E3006A90C5 /* SchedulesViewController.swift */,
+			);
+			path = Schedules;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -475,9 +505,11 @@
 				DC6AFAF8214414920008E0E1 /* Network.swift in Sources */,
 				DC6AFB182145E0B50008E0E1 /* AirPort.swift in Sources */,
 				DC6AFAFF21442E530008E0E1 /* NetworkProvider.swift in Sources */,
+				DC6E2FCC2148B14D006A90C5 /* AirPortSearchViewModel.swift in Sources */,
 				DC59E84B214884C50010B239 /* AirPortsSearchViewController.swift in Sources */,
 				DC6AFB092145D0760008E0E1 /* LaunchViewController.swift in Sources */,
 				DC59E84F21488A610010B239 /* AutoCompleteViewController.swift in Sources */,
+				DC6E2FCF2148D3E3006A90C5 /* SchedulesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

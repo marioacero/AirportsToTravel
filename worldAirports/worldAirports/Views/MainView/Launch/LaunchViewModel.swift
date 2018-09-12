@@ -26,7 +26,7 @@ class LaunchViewModel {
     }
     
     func getAirportsData() {
-        let airportsFromCache = RealmManager.shared.getAll(Class: AirportsRealm.self)
+        let airportsFromCache: AirportsDictionary = RealmManager.shared.getAll(Class: AirportsRealm.self)
         if !airportsFromCache.isEmpty {
             goToSearchAirports?()
             return
@@ -82,7 +82,6 @@ class LaunchViewModel {
                         airportCache.longitude.value = airportData.longitude
                         RealmManager.shared.addObject(object: airportCache, update: true)
                     }
-                    
                     
                     if strongSelf.progressByRequest == 0.0 {
                         strongSelf.progressByRequest = Float(totalCount)/12000.0

@@ -46,6 +46,17 @@ class NetworkProvider: Network {
         }
     }
     
+    func getSchedules(departCode: String, arriveCode: String, date: String, completion: @escaping ApiServiceResponseClosure) {
+        provider.request(.getSchedule(depart: departCode, arrive: arriveCode, date: date)) { [weak self] (response) in
+            guard let strongSelf = self else {
+                completion(.failure(error: nil))
+                return
+            }
+            
+            strongSelf.validateResponse(response: response, completion: completion)
+        }
+    }
+    
     private func validateResponse( response: Result<Moya.Response, MoyaError>, completion: @escaping ApiServiceResponseClosure) {
         switch response {
         case .success(let result):

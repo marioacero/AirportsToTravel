@@ -10,5 +10,13 @@ import Foundation
 
 class AutoCompleteViewModel {
     
+    var dataSource:AirportsDictionary! {
+        didSet {
+            reloadData?()
+        }
+    }
+    
+    var reloadData: (()->())?
+    
 }
 

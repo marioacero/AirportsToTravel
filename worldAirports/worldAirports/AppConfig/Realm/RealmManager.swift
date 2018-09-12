@@ -9,6 +9,9 @@
 import Foundation
 import RealmSwift
 
+
+typealias AirportsDictionary = Results<AirportsRealm>
+
 class RealmManager {
     
     private var realm: Realm!
