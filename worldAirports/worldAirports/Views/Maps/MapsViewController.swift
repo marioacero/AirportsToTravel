@@ -21,6 +21,15 @@ class MapsViewController: UIViewController {
 
         let camera = GMSCameraPosition.camera(withLatitude:  viewModel.originDetination.depart.latitude.value!, longitude: viewModel.originDetination.depart.longitude.value!, zoom: 7.0)
         mapView = .map(withFrame: CGRect.zero, camera: camera)
+        
+        let markerDepart = GMSMarker()
+        markerDepart.position = CLLocationCoordinate2D(latitude: viewModel.originDetination.depart.latitude.value!, longitude: viewModel.originDetination.depart.longitude.value!)
+        markerDepart.map = mapView
+        
+        let markerArrived = GMSMarker()
+        markerArrived.position = CLLocationCoordinate2D(latitude: viewModel.originDetination.arrival.latitude.value!, longitude: viewModel.originDetination.arrival.longitude.value!)
+        markerArrived.map = mapView
+        
         view = mapView
     }
     
