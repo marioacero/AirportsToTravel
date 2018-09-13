@@ -1,0 +1,404 @@
+{
+	"ScheduleResource": {
+		"Schedule": [{
+			"TotalJourney": {
+				"Duration": "PT1H14M"
+			},
+			"Flight": {
+				"Departure": {
+					"AirportCode": "CUC",
+					"ScheduledTimeLocal": {
+						"DateTime": "2018-09-13T05:31"
+					}
+				},
+				"Arrival": {
+					"AirportCode": "BOG",
+					"ScheduledTimeLocal": {
+						"DateTime": "2018-09-13T06:45"
+					},
+					"Terminal": {
+						"Name": 1
+					}
+				},
+				"MarketingCarrier": {
+					"AirlineID": "AV",
+					"FlightNumber": 9429
+				},
+				"Equipment": {
+					"AircraftCode": 318
+				},
+				"Details": {
+					"Stops": {
+						"StopQuantity": 0
+					},
+					"DaysOfOperation": 4,
+					"DatePeriod": {
+						"Effective": "2018-09-13",
+						"Expiration": "2018-09-13"
+					}
+				}
+			}
+		}, {
+			"TotalJourney": {
+				"Duration": "PT1H14M"
+			},
+			"Flight": {
+				"Departure": {
+					"AirportCode": "CUC",
+					"ScheduledTimeLocal": {
+						"DateTime": "2018-09-13T06:31"
+					}
+				},
+				"Arrival": {
+					"AirportCode": "BOG",
+					"ScheduledTimeLocal": {
+						"DateTime": "2018-09-13T07:45"
+					},
+					"Terminal": {
+						"Name": 1
+					}
+				},
+				"MarketingCarrier": {
+					"AirlineID": "AV",
+					"FlightNumber": 9457
+				},
+				"Equipment": {
+					"AircraftCode": 319
+				},
+				"Details": {
+					"Stops": {
+						"StopQuantity": 0
+					},
+					"DaysOfOperation": 4,
+					"DatePeriod": {
+						"Effective": "2018-09-13",
+						"Expiration": "2018-09-20"
+					}
+				}
+			}
+		}, {
+			"TotalJourney": {
+				"Duration": "PT1H4M"
+			},
+			"Flight": {
+				"Departure": {
+					"AirportCode": "CUC",
+					"ScheduledTimeLocal": {
+						"DateTime": "2018-09-13T07:04"
+					}
+				},
+				"Arrival": {
+					"AirportCode": "BOG",
+					"ScheduledTimeLocal": {
+						"DateTime": "2018-09-13T08:08"
+					}
+				},
+				"MarketingCarrier": {
+					"AirlineID": "LA",
+					"FlightNumber": 4189
+				},
+				"Equipment": {
+					"AircraftCode": 319
+				},
+				"Details": {
+					"Stops": {
+						"StopQuantity": 0
+					},
+					"DaysOfOperation": 4,
+					"DatePeriod": {
+						"Effective": "2018-09-13",
+						"Expiration": "2018-09-13"
+					}
+				}
+			}
+		}, {
+			"TotalJourney": {
+				"Duration": "PT1H14M"
+			},
+			"Flight": {
+				"Departure": {
+					"AirportCode": "CUC",
+					"ScheduledTimeLocal": {
+						"DateTime": "2018-09-13T07:11"
+					}
+				},
+				"Arrival": {
+					"AirportCode": "BOG",
+					"ScheduledTimeLocal": {
+						"DateTime": "2018-09-13T08:25"
+					},
+					"Terminal": {
+						"Name": 1
+					}
+				},
+				"MarketingCarrier": {
+					"AirlineID": "AV",
+					"FlightNumber": 9443
+				},
+				"Equipment": {
+					"AircraftCode": 318
+				},
+				"Details": {
+					"Stops": {
+						"StopQuantity": 0
+					},
+					"DaysOfOperation": 45,
+					"DatePeriod": {
+						"Effective": "2018-09-13",
+						"Expiration": "2018-09-14"
+					}
+				}
+			}
+		}, {
+			"TotalJourney": {
+				"Duration": "PT1H14M"
+			},
+			"Flight": {
+				"Departure": {
+					"AirportCode": "CUC",
+					"ScheduledTimeLocal": {
+						"DateTime": "2018-09-13T07:50"
+					}
+				},
+				"Arrival": {
+					"AirportCode": "BOG",
+					"ScheduledTimeLocal": {
+						"DateTime": "2018-09-13T09:04"
+					},
+					"Terminal": {
+						"Name": 1
+					}
+				},
+				"MarketingCarrier": {
+					"AirlineID": "AV",
+					"FlightNumber": 9451
+				},
+				"Equipment": {
+					"AircraftCode": 320
+				},
+				"Details": {
+					"Stops": {
+						"StopQuantity": 0
+					},
+					"DaysOfOperation": 2457,
+					"DatePeriod": {
+						"Effective": "2018-09-13",
+						"Expiration": "2018-09-18"
+					}
+				}
+			}
+		}, {
+			"TotalJourney": {
+				"Duration": "PT1H14M"
+			},
+			"Flight": {
+				"Departure": {
+					"AirportCode": "CUC",
+					"ScheduledTimeLocal": {
+						"DateTime": "2018-09-13T11:01"
+					}
+				},
+				"Arrival": {
+					"AirportCode": "BOG",
+					"ScheduledTimeLocal": {
+						"DateTime": "2018-09-13T12:15"
+					},
+					"Terminal": {
+						"Name": 1
+					}
+				},
+				"MarketingCarrier": {
+					"AirlineID": "AV",
+					"FlightNumber": 9723
+				},
+				"Equipment": {
+					"AircraftCode": 318
+				},
+				"Details": {
+					"Stops": {
+						"StopQuantity": 0
+					},
+					"DaysOfOperation": 456,
+					"DatePeriod": {
+						"Effective": "2018-09-13",
+						"Expiration": "2018-09-20"
+					}
+				}
+			}
+		}, {
+			"TotalJourney": {
+				"Duration": "PT1H14M"
+			},
+			"Flight": {
+				"Departure": {
+					"AirportCode": "CUC",
+					"ScheduledTimeLocal": {
+						"DateTime": "2018-09-13T15:55"
+					}
+				},
+				"Arrival": {
+					"AirportCode": "BOG",
+					"ScheduledTimeLocal": {
+						"DateTime": "2018-09-13T17:09"
+					},
+					"Terminal": {
+						"Name": 1
+					}
+				},
+				"MarketingCarrier": {
+					"AirlineID": "AV",
+					"FlightNumber": 9445
+				},
+				"Equipment": {
+					"AircraftCode": 319
+				},
+				"Details": {
+					"Stops": {
+						"StopQuantity": 0
+					},
+					"DaysOfOperation": 24,
+					"DatePeriod": {
+						"Effective": "2018-09-13",
+						"Expiration": "2018-09-18"
+					}
+				}
+			}
+		}, {
+			"TotalJourney": {
+				"Duration": "PT1H14M"
+			},
+			"Flight": {
+				"Departure": {
+					"AirportCode": "CUC",
+					"ScheduledTimeLocal": {
+						"DateTime": "2018-09-13T18:20"
+					}
+				},
+				"Arrival": {
+					"AirportCode": "BOG",
+					"ScheduledTimeLocal": {
+						"DateTime": "2018-09-13T19:34"
+					},
+					"Terminal": {
+						"Name": 1
+					}
+				},
+				"MarketingCarrier": {
+					"AirlineID": "AV",
+					"FlightNumber": 9447
+				},
+				"Equipment": {
+					"AircraftCode": 320
+				},
+				"Details": {
+					"Stops": {
+						"StopQuantity": 0
+					},
+					"DaysOfOperation": 467,
+					"DatePeriod": {
+						"Effective": "2018-09-13",
+						"Expiration": "2018-09-16"
+					}
+				}
+			}
+		}, {
+			"TotalJourney": {
+				"Duration": "PT1H14M"
+			},
+			"Flight": {
+				"Departure": {
+					"AirportCode": "CUC",
+					"ScheduledTimeLocal": {
+						"DateTime": "2018-09-13T20:01"
+					}
+				},
+				"Arrival": {
+					"AirportCode": "BOG",
+					"ScheduledTimeLocal": {
+						"DateTime": "2018-09-13T21:15"
+					},
+					"Terminal": {
+						"Name": 1
+					}
+				},
+				"MarketingCarrier": {
+					"AirlineID": "AV",
+					"FlightNumber": 9453
+				},
+				"Equipment": {
+					"AircraftCode": 319
+				},
+				"Details": {
+					"Stops": {
+						"StopQuantity": 0
+					},
+					"DaysOfOperation": 467,
+					"DatePeriod": {
+						"Effective": "2018-09-13",
+						"Expiration": "2018-09-20"
+					}
+				}
+			}
+		}, {
+			"TotalJourney": {
+				"Duration": "PT1H14M"
+			},
+			"Flight": {
+				"Departure": {
+					"AirportCode": "CUC",
+					"ScheduledTimeLocal": {
+						"DateTime": "2018-09-13T21:45"
+					}
+				},
+				"Arrival": {
+					"AirportCode": "BOG",
+					"ScheduledTimeLocal": {
+						"DateTime": "2018-09-13T22:59"
+					},
+					"Terminal": {
+						"Name": 1
+					}
+				},
+				"MarketingCarrier": {
+					"AirlineID": "AV",
+					"FlightNumber": 9459
+				},
+				"Equipment": {
+					"AircraftCode": 320
+				},
+				"Details": {
+					"Stops": {
+						"StopQuantity": 0
+					},
+					"DaysOfOperation": 123456,
+					"DatePeriod": {
+						"Effective": "2018-09-13",
+						"Expiration": "2018-09-20"
+					}
+				}
+			}
+		}],
+		"Meta": {
+			"@Version": "1.0.0",
+			"Link": [{
+				"@Href": "https:\/\/api.lufthansa.com\/v1\/operations\/schedules\/CUC\/BOG\/2018-09-13?directFlights=1",
+				"@Rel": "self"
+			}, {
+				"@Href": "https:\/\/api.lufthansa.com\/v1\/operations\/schedules\/CUC\/BOG\/2018-09-12?directFlights=1&offset=0&limit=20",
+				"@Rel": "previousRange"
+			}, {
+				"@Href": "https:\/\/api.lufthansa.com\/v1\/operations\/schedules\/CUC\/BOG\/2018-09-13?directFlights=1&offset=20&limit=20",
+				"@Rel": "next"
+			}, {
+				"@Href": "https:\/\/api.lufthansa.com\/v1\/operations\/schedules\/CUC\/BOG\/2018-09-18T22:55?directFlights=1&offset=0&limit=20",
+				"@Rel": "nextRange"
+			}, {
+				"@Href": "https:\/\/api.lufthansa.com\/v1\/references\/airports\/{airportCode}",
+				"@Rel": "related"
+			}, {
+				"@Href": "https:\/\/api.lufthansa.com\/v1\/references\/aircraft\/{aircraftCode}",
+				"@Rel": "related"
+			}]
+		}
+	}
+}

@@ -28,6 +28,7 @@ class AirPortsSearchViewController: UIViewController {
         super.viewDidLoad()
         departTextField.inputAccessoryView = addDoneButtonToolbar()
         arriveTextField.inputAccessoryView = addDoneButtonToolbar()
+        activity.isHidden = true
         setDataBinding()
     }
 
@@ -140,6 +141,10 @@ class AirPortsSearchViewController: UIViewController {
                 controller.viewModel.arrivalAirport = viewModel.arriveAirport
             }
         }
+        
+        let backItem = UIBarButtonItem()
+        backItem.title = "Back"
+        navigationItem.backBarButtonItem = backItem
     }
     
     private func validateTextType(_ sender: UITextField) {

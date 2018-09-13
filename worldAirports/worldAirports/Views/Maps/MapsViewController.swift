@@ -40,11 +40,4 @@ class MapsViewController: UIViewController {
         }
         mapView.animate(with: GMSCameraUpdate.fit(bounds, withPadding: 50.0))
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
 }

@@ -53,5 +53,8 @@ extension SchedulesViewController: UITableViewDelegate, UITableViewDataSource {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let controller: MapsViewController = segue.destination as! MapsViewController
         controller.viewModel.originDetination = (viewModel.departAirport, viewModel.arrivalAirport)
+        let backItem = UIBarButtonItem()
+        backItem.title = "Schedules"
+        navigationItem.backBarButtonItem = backItem
     }
 }

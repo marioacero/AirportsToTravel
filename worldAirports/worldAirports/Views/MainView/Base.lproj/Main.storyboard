@@ -108,7 +108,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QWk-1P-qys">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="QWk-1P-qys">
                                 <rect key="frame" x="16" y="138" width="343" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="nrn-x3-ryb"/>
@@ -121,7 +121,7 @@
                                     <action selector="departEndEditing:" destination="EDO-Zs-bos" eventType="editingDidEnd" id="NMp-6d-IhQ"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="i0c-CN-egf">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="i0c-CN-egf">
                                 <rect key="frame" x="16" y="225" width="343" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="Jai-ib-oaY"/>
@@ -189,10 +189,10 @@
             </objects>
             <point key="canvasLocation" x="2655.1999999999998" y="38.23088455772114"/>
         </scene>
-        <!--Schedules View Controller-->
+        <!--Today-->
         <scene sceneID="JzP-q6-pWn">
             <objects>
-                <viewController id="0rW-jN-j8G" customClass="SchedulesViewController" customModule="worldAirports" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Today" id="0rW-jN-j8G" customClass="SchedulesViewController" customModule="worldAirports" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LdA-Cg-ayC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -224,10 +224,10 @@
             </objects>
             <point key="canvasLocation" x="3482" y="38"/>
         </scene>
-        <!--Today-->
+        <!--Maps View Controller-->
         <scene sceneID="1AC-P4-F9q">
             <objects>
-                <viewController title="Today" id="4BO-6O-wSj" customClass="MapsViewController" customModule="worldAirports" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="4BO-6O-wSj" customClass="MapsViewController" customModule="worldAirports" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="81O-IM-WyU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

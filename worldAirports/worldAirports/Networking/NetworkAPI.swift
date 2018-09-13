@@ -55,14 +55,7 @@ extension NetworkAPI: TargetType {
     }
     
     var sampleData: Data {
-        switch self {
-        case .getToken:
-            return "{success data }".data(using: String.Encoding.utf8)!
-        case .getAirports:
-            return "{success data }".data(using: String.Encoding.utf8)!
-        case .getSchedule, .getGoogleData:
-            return "{success data }".data(using: String.Encoding.utf8)!
-        }
+        return MockLocator.shared.getMockData(action: self).data(using: String.Encoding.utf8)!
     }
     
     var failureData: Data {
@@ -91,9 +84,7 @@ extension NetworkAPI: TargetType {
                                                    "offset": offset ], encoding: URLEncoding.queryString )
         case .getSchedule:
             return .requestParameters(parameters: ["directFlights": 1 ], encoding: URLEncoding.queryString )
-        case .getGoogleData(let depart, let  arrival):
-//            return .requestParameters(parameters: ["origin": "\(depart.latitude),\(depart.longitude)",
-//            "destination": "\(arrival.latitude),\(arrival.longitude)"], encoding: )
+        case .getGoogleData:
             return .requestPlain
             
         }
@@ -113,4 +104,6 @@ extension NetworkAPI: TargetType {
     var validationType: ValidationType {
         return .successCodes
     }
+    
+    
 }

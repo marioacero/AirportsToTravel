@@ -24,27 +24,15 @@ class SchedulesTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
     func setCell(row: SchedulesList.Schedule) {
-        
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm"
-        var date = dateFormatter.date(from: row.departTime!)
-        let calendar = Calendar.current
-        var comp = calendar.dateComponents([.hour, .minute], from: date!)
-        departTime.text = "\(comp.hour!):\(comp.minute!)"
-        date = dateFormatter.date(from: row.arrivalTime!)
-        comp = calendar.dateComponents([.hour, .minute], from: date!)
-        arrivalTime.text = "\(comp.hour!):\(comp.minute!)"
-        
+        departTime.text = row.departTime
+        arrivalTime.text = row.arrivalTime
         departCode.text = row.departCode
         arrivalCode.text = row.arrivalCode
         durationTime.text = row.duration
         flightNumber.text = String(row.flightNumber!)
-        
     }
     
 }

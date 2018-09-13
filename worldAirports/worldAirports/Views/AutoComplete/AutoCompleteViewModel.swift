@@ -17,6 +17,5 @@ class AutoCompleteViewModel {
     }
     
     var reloadData: (()->())?
-    
 }
 

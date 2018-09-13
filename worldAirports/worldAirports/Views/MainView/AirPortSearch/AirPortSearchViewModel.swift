@@ -30,6 +30,18 @@ class AirPortSearchViewModel: BaseViewModel {
         }
     }
     
+    var currentDay: String {
+        let month = NSCalendar(identifier: NSCalendar.Identifier.gregorian)!.component(.month, from: NSDate() as Date)
+        let day = NSCalendar(identifier: NSCalendar.Identifier.gregorian)!.component(.day, from: NSDate() as Date)
+        let year = NSCalendar(identifier: NSCalendar.Identifier.gregorian)!.component(.year, from: NSDate() as Date)
+        
+        var monthString = "\(month)"
+        if month < 10 {
+            monthString = "0\(month)"
+        }
+        return "\(year)-\(monthString)-\(day)"
+    }
+    
     override init() {
         super.init()
     }
@@ -38,7 +50,7 @@ class AirPortSearchViewModel: BaseViewModel {
         showLoadingAnimated?(true)
         networkProvider.getSchedules(departCode: departAirport!.airportCode,
                                      arriveCode: arriveAirport!.airportCode,
-                                     date: "2018-09-12") { [weak self] (response) in
+                                     date: currentDay) { [weak self] (response) in
             guard let strongSelf = self else { return }
                                         
             strongSelf.showLoadingAnimated?(false)

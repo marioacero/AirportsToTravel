@@ -57,10 +57,6 @@ class NetworkProvider: Network {
         }
     }
     
-    func getGoogleData() {
-        
-    }
-    
     private func validateResponse( response: Result<Moya.Response, MoyaError>, completion: @escaping ApiServiceResponseClosure) {
         switch response {
         case .success(let result):

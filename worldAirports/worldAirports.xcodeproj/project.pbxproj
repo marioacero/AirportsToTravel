@@ -36,7 +36,7 @@
 		DC6AFB182145E0B50008E0E1 /* AirPort.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6AFB172145E0B50008E0E1 /* AirPort.swift */; };
 		DC6E2FCC2148B14D006A90C5 /* AirPortSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6E2FCB2148B14D006A90C5 /* AirPortSearchViewModel.swift */; };
 		DC6E2FCF2148D3E3006A90C5 /* SchedulesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6E2FCE2148D3E3006A90C5 /* SchedulesViewController.swift */; };
-		DC6E2FD321499117006A90C5 /* ItineraryInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6E2FD221499117006A90C5 /* ItineraryInfo.swift */; };
+		DC6E2FD321499117006A90C5 /* SchedulesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6E2FD221499117006A90C5 /* SchedulesList.swift */; };
 		DC6E2FD521499C46006A90C5 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6E2FD421499C46006A90C5 /* BaseViewModel.swift */; };
 		DC6E2FD7214A0D3A006A90C5 /* SchedulesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6E2FD6214A0D3A006A90C5 /* SchedulesViewModel.swift */; };
 		DC6E2FDA214A1186006A90C5 /* SchedulesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6E2FD8214A1186006A90C5 /* SchedulesTableViewCell.swift */; };
@@ -44,6 +44,15 @@
 		DC6E2FDE214A193E006A90C5 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6E2FDD214A193E006A90C5 /* Extensions.swift */; };
 		DC6E2FE1214A2A91006A90C5 /* MapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6E2FE0214A2A91006A90C5 /* MapsViewController.swift */; };
 		DC6E2FE3214A2B67006A90C5 /* MapsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6E2FE2214A2B67006A90C5 /* MapsViewModel.swift */; };
+		DC6E2FE7214AE57A006A90C5 /* NetworkProviderTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6E2FE6214AE57A006A90C5 /* NetworkProviderTest.swift */; };
+		DC6E2FEA214AE728006A90C5 /* CustomClosureBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6E2FE8214AE689006A90C5 /* CustomClosureBuilder.swift */; };
+		DC6E2FF0214AF824006A90C5 /* OauthResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = DC6E2FED214AF823006A90C5 /* OauthResponse.json */; };
+		DC6E2FF1214AF824006A90C5 /* getAirportsResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = DC6E2FEE214AF823006A90C5 /* getAirportsResponse.json */; };
+		DC6E2FF2214AF824006A90C5 /* getSchedulesResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = DC6E2FEF214AF823006A90C5 /* getSchedulesResponse.json */; };
+		DC6E2FF4214AF8C7006A90C5 /* MockLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6E2FF3214AF8C7006A90C5 /* MockLocator.swift */; };
+		DC6E2FF8214AFCEA006A90C5 /* getAirportsResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = DC6E2FEE214AF823006A90C5 /* getAirportsResponse.json */; };
+		DC6E2FF9214AFCED006A90C5 /* getSchedulesResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = DC6E2FEF214AF823006A90C5 /* getSchedulesResponse.json */; };
+		DC6E2FFA214AFCF2006A90C5 /* OauthResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = DC6E2FED214AF823006A90C5 /* OauthResponse.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,7 +102,7 @@
 		DC6AFB172145E0B50008E0E1 /* AirPort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirPort.swift; sourceTree = "<group>"; };
 		DC6E2FCB2148B14D006A90C5 /* AirPortSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirPortSearchViewModel.swift; sourceTree = "<group>"; };
 		DC6E2FCE2148D3E3006A90C5 /* SchedulesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchedulesViewController.swift; sourceTree = "<group>"; };
-		DC6E2FD221499117006A90C5 /* ItineraryInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItineraryInfo.swift; sourceTree = "<group>"; };
+		DC6E2FD221499117006A90C5 /* SchedulesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchedulesList.swift; sourceTree = "<group>"; };
 		DC6E2FD421499C46006A90C5 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		DC6E2FD6214A0D3A006A90C5 /* SchedulesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchedulesViewModel.swift; sourceTree = "<group>"; };
 		DC6E2FD8214A1186006A90C5 /* SchedulesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchedulesTableViewCell.swift; sourceTree = "<group>"; };
@@ -101,6 +110,12 @@
 		DC6E2FDD214A193E006A90C5 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		DC6E2FE0214A2A91006A90C5 /* MapsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsViewController.swift; sourceTree = "<group>"; };
 		DC6E2FE2214A2B67006A90C5 /* MapsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsViewModel.swift; sourceTree = "<group>"; };
+		DC6E2FE6214AE57A006A90C5 /* NetworkProviderTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProviderTest.swift; sourceTree = "<group>"; };
+		DC6E2FE8214AE689006A90C5 /* CustomClosureBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomClosureBuilder.swift; sourceTree = "<group>"; };
+		DC6E2FED214AF823006A90C5 /* OauthResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = OauthResponse.json; sourceTree = "<group>"; };
+		DC6E2FEE214AF823006A90C5 /* getAirportsResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = getAirportsResponse.json; sourceTree = "<group>"; };
+		DC6E2FEF214AF823006A90C5 /* getSchedulesResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = getSchedulesResponse.json; sourceTree = "<group>"; };
+		DC6E2FF3214AF8C7006A90C5 /* MockLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLocator.swift; sourceTree = "<group>"; };
 		FEE5A2122B3BA2380EC92D09 /* Pods-worldAirportsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-worldAirportsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-worldAirportsTests/Pods-worldAirportsTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -192,8 +207,11 @@
 		DC6AFAE621440C850008E0E1 /* worldAirportsTests */ = {
 			isa = PBXGroup;
 			children = (
+				DC6E2FEC214AF809006A90C5 /* Mocks */,
 				DC6AFAE721440C850008E0E1 /* worldAirportsTests.swift */,
 				DC6AFAE921440C860008E0E1 /* Info.plist */,
+				DC6E2FE6214AE57A006A90C5 /* NetworkProviderTest.swift */,
+				DC6E2FE8214AE689006A90C5 /* CustomClosureBuilder.swift */,
 			);
 			path = worldAirportsTests;
 			sourceTree = "<group>";
@@ -206,6 +224,7 @@
 				DC6AFAD221440C820008E0E1 /* AppDelegate.swift */,
 				DC6AFB0A2145D0A70008E0E1 /* AppConstants.swift */,
 				DC6E2FDD214A193E006A90C5 /* Extensions.swift */,
+				DC6E2FF3214AF8C7006A90C5 /* MockLocator.swift */,
 			);
 			path = AppConfig;
 			sourceTree = "<group>";
@@ -225,7 +244,7 @@
 				DC6AFB102145D5490008E0E1 /* Realm Objects */,
 				DC6AFB0E2145D2990008E0E1 /* Auth.swift */,
 				DC6AFB172145E0B50008E0E1 /* AirPort.swift */,
-				DC6E2FD221499117006A90C5 /* ItineraryInfo.swift */,
+				DC6E2FD221499117006A90C5 /* SchedulesList.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -327,6 +346,16 @@
 			path = Maps;
 			sourceTree = "<group>";
 		};
+		DC6E2FEC214AF809006A90C5 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				DC6E2FEE214AF823006A90C5 /* getAirportsResponse.json */,
+				DC6E2FEF214AF823006A90C5 /* getSchedulesResponse.json */,
+				DC6E2FED214AF823006A90C5 /* OauthResponse.json */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -416,8 +445,11 @@
 				DC59E85021488A610010B239 /* AutoCompleteViewController.xib in Resources */,
 				DC6E2FDB214A1186006A90C5 /* SchedulesTableViewCell.xib in Resources */,
 				DC6AFAF42144133B0008E0E1 /* Environments.plist in Resources */,
+				DC6E2FF8214AFCEA006A90C5 /* getAirportsResponse.json in Resources */,
 				DC6AFAF62144134D0008E0E1 /* EndPoints.plist in Resources */,
 				DC6AFADD21440C850008E0E1 /* LaunchScreen.storyboard in Resources */,
+				DC6E2FFA214AFCF2006A90C5 /* OauthResponse.json in Resources */,
+				DC6E2FF9214AFCED006A90C5 /* getSchedulesResponse.json in Resources */,
 				DC6AFADA21440C850008E0E1 /* Assets.xcassets in Resources */,
 				DC6AFAD821440C820008E0E1 /* Main.storyboard in Resources */,
 			);
@@ -427,6 +459,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC6E2FF2214AF824006A90C5 /* getSchedulesResponse.json in Resources */,
+				DC6E2FF0214AF824006A90C5 /* OauthResponse.json in Resources */,
+				DC6E2FF1214AF824006A90C5 /* getAirportsResponse.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -554,6 +589,7 @@
 				DC6AFB0D2145D1000008E0E1 /* LaunchViewModel.swift in Sources */,
 				DC6AFAD321440C820008E0E1 /* AppDelegate.swift in Sources */,
 				DC6AFB0121442EA50008E0E1 /* NetworkAPI.swift in Sources */,
+				DC6E2FF4214AF8C7006A90C5 /* MockLocator.swift in Sources */,
 				DC6E2FDA214A1186006A90C5 /* SchedulesTableViewCell.swift in Sources */,
 				DC59E85221488B240010B239 /* AutoCompleteViewModel.swift in Sources */,
 				DC03B9D021476C0100702374 /* AirportsRealm.swift in Sources */,
@@ -563,7 +599,7 @@
 				DC6AFAF8214414920008E0E1 /* Network.swift in Sources */,
 				DC6AFB182145E0B50008E0E1 /* AirPort.swift in Sources */,
 				DC6E2FE3214A2B67006A90C5 /* MapsViewModel.swift in Sources */,
-				DC6E2FD321499117006A90C5 /* ItineraryInfo.swift in Sources */,
+				DC6E2FD321499117006A90C5 /* SchedulesList.swift in Sources */,
 				DC6AFAFF21442E530008E0E1 /* NetworkProvider.swift in Sources */,
 				DC6E2FCC2148B14D006A90C5 /* AirPortSearchViewModel.swift in Sources */,
 				DC6E2FDE214A193E006A90C5 /* Extensions.swift in Sources */,
@@ -579,6 +615,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC6AFAE821440C850008E0E1 /* worldAirportsTests.swift in Sources */,
+				DC6E2FE7214AE57A006A90C5 /* NetworkProviderTest.swift in Sources */,
+				DC6E2FEA214AE728006A90C5 /* CustomClosureBuilder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
