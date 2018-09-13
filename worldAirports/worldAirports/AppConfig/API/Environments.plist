@@ -11,6 +11,10 @@
 	</dict>
 	<key>Debug</key>
 	<dict>
+		<key>google-api</key>
+		<string>http://maps.googleapis.com/maps/api/directions/json</string>
+		<key>maps-key</key>
+		<string>AIzaSyDVaQwr4wyRTB6STyE2EGuiBHL9Zso3rwc</string>
 		<key>base-url</key>
 		<string>https://api.lufthansa.com/v1</string>
 		<key>api-key</key>

@@ -13,11 +13,10 @@ class AirPortsSearchViewController: UIViewController {
     @IBOutlet weak var departTextField: UITextField!
     @IBOutlet weak var arriveTextField: UITextField!
     @IBOutlet weak var continueButton: UIButton!
-    
     @IBOutlet weak var activity: UIActivityIndicatorView!
+    
     var autocompleteview:AutoCompleteViewController!
     var textFieldToShowAutoComplete: UITextField!
-    
     var enabledColor = UIColor(red: 32/255, green: 199/255, blue: 214/255, alpha: 1)
     var disabledColor = UIColor(red: 235/255, green: 235/255, blue: 235/255, alpha: 1)
     
@@ -30,8 +29,6 @@ class AirPortsSearchViewController: UIViewController {
         departTextField.inputAccessoryView = addDoneButtonToolbar()
         arriveTextField.inputAccessoryView = addDoneButtonToolbar()
         setDataBinding()
-        
-        
     }
 
     func setDataBinding() {
@@ -84,6 +81,20 @@ class AirPortsSearchViewController: UIViewController {
             }
             strongSelf.activity.stopAnimating()
         }
+        
+        viewModel.gotToSchedule = { [weak self]  (schedules) in
+            guard let strongSelf = self else { return }
+            
+            strongSelf.performSegue(withIdentifier: "showSchedules", sender: schedules)
+        }
+        
+        viewModel.notSchedulesAlert = {[weak self] in
+            guard let strongSelf = self else { return }
+            
+            let alert = UIAlertController(title: "Oooopss", message: "Looks like not there direct flights for you, try again or change your destination", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+            strongSelf.present(alert, animated: true)
+        }
     }
     
     // Editing Changed
@@ -117,6 +128,18 @@ class AirPortsSearchViewController: UIViewController {
     
     @IBAction func continueAction(_ sender: UIButton) {
         viewModel.getSchedules()
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showSchedules" {
+            let controller: SchedulesViewController = segue.destination as! SchedulesViewController
+            if let schedules = sender as? SchedulesList {
+                controller.viewModel.dataSource = schedules
+                controller.viewModel.departAirport = viewModel.departAirport
+                controller.viewModel.arrivalAirport = viewModel.arriveAirport
+            }
+        }
     }
     
     private func validateTextType(_ sender: UITextField) {

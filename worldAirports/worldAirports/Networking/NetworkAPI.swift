@@ -13,13 +13,21 @@ enum NetworkAPI {
     case getToken()
     case getAirports(offSet: Int)
     case getSchedule(depart: String, arrive: String, date: String)
+    case getGoogleData(depart: AirportsRealm, arrival:AirportsRealm)
 }
 
 extension NetworkAPI: TargetType {
     
     var baseURL: URL {
-        guard let url = URL(string: EnvironmentConfiguration.shared.APIEndpoint()!) else { fatalError("baseURL could not be configured.")}
-        return url
+        switch self {
+        case .getAirports, .getSchedule, .getToken:
+            guard let url = URL(string: EnvironmentConfiguration.shared.APIEndpoint()!) else { fatalError("baseURL could not be configured.")}
+            return url
+        case .getGoogleData:
+            guard let url = URL(string: EnvironmentConfiguration.shared.googleAPI()!) else { fatalError("google url could not be configured.")}
+            return url
+        }
+        
     }
     
     var path: String {
@@ -31,6 +39,8 @@ extension NetworkAPI: TargetType {
         case .getSchedule(let departCode, let arriveCode, let date):
             let URl = EndPointsConfiguration.sharedInstance.getPath(endPointPath: BasicKeys.Operations, endPointKey: BasicKeys.OperationsKeys.getSchedule)
             return String(format: URl, departCode, arriveCode, date)
+        case .getGoogleData:
+            return ""
         }
     }
     
@@ -38,7 +48,7 @@ extension NetworkAPI: TargetType {
         switch self {
         case .getToken:
             return .post
-        case .getAirports, .getSchedule :
+        case .getAirports, .getSchedule, .getGoogleData :
             return .get
         }
         
@@ -50,7 +60,7 @@ extension NetworkAPI: TargetType {
             return "{success data }".data(using: String.Encoding.utf8)!
         case .getAirports:
             return "{success data }".data(using: String.Encoding.utf8)!
-        case .getSchedule:
+        case .getSchedule, .getGoogleData:
             return "{success data }".data(using: String.Encoding.utf8)!
         }
     }
@@ -61,7 +71,7 @@ extension NetworkAPI: TargetType {
             return "{failure data test}".data(using: String.Encoding.utf8)!
         case .getAirports:
             return "{failure data test}".data(using: String.Encoding.utf8)!
-        case .getSchedule:
+        case .getSchedule, .getGoogleData:
             return "{failure data }".data(using: String.Encoding.utf8)!
         }
     }
@@ -81,6 +91,11 @@ extension NetworkAPI: TargetType {
                                                    "offset": offset ], encoding: URLEncoding.queryString )
         case .getSchedule:
             return .requestParameters(parameters: ["directFlights": 1 ], encoding: URLEncoding.queryString )
+        case .getGoogleData(let depart, let  arrival):
+//            return .requestParameters(parameters: ["origin": "\(depart.latitude),\(depart.longitude)",
+//            "destination": "\(arrival.latitude),\(arrival.longitude)"], encoding: )
+            return .requestPlain
+            
         }
     }
     
@@ -88,7 +103,7 @@ extension NetworkAPI: TargetType {
         switch self {
         case .getToken:
             return ["Content-Type": "application/x-www-form-urlencoded"]
-        case .getAirports, .getSchedule:
+        case .getAirports, .getSchedule, .getGoogleData:
             return ["Accept": "application/json",
                     "Authorization" : "Bearer \(EnvironmentConfiguration.accesToken!)"
             ]

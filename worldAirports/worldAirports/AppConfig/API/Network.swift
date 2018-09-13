@@ -10,7 +10,7 @@ import Foundation
 import Moya
 
 enum ApiServiceResponse {
-    case failure(error: Any?)
+    case failure(error: MoyaError?)
     case notConnectedToInternet
     case success(response: Response?)
 }

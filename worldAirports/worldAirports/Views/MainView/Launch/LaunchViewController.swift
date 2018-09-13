@@ -38,8 +38,4 @@ class LaunchViewController: UIViewController {
             strongSelf.performSegue(withIdentifier: "goToSearchAirport", sender: self)
         }
     }
-
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        print(segue.identifier)
-    }
 }

@@ -6,6 +6,8 @@ target 'worldAirports' do
   use_frameworks!
   pod 'Moya'
   pod 'RealmSwift'
+  pod 'GoogleMaps'
+  pod 'GooglePlaces'
 
   target 'worldAirportsTests' do
     inherit! :search_paths

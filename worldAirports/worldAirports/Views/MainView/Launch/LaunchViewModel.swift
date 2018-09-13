@@ -8,9 +8,9 @@
 
 import Foundation
 
-class LaunchViewModel {
+class LaunchViewModel: BaseViewModel {
     
-    var networkProvider: NetworkProvider!
+    
     private var totalAirpotData: Int = 0
     private var offSet = 0
     var progressByRequest: Float = 0.0
@@ -18,16 +18,15 @@ class LaunchViewModel {
     
     var updateProgressBar: ((Float)->())?
     var goToSearchAirports: (()->())?
-    var dataIsLoaded: (()->())?
+    var isGetingData: Bool = false
     
-    
-    init() {
-        networkProvider = NetworkProvider()
+    override init() {
+        super.init()
     }
     
     func getAirportsData() {
         let airportsFromCache: AirportsDictionary = RealmManager.shared.getAll(Class: AirportsRealm.self)
-        if !airportsFromCache.isEmpty {
+        if !airportsFromCache.isEmpty && !isGetingData{
             goToSearchAirports?()
             return
         }
@@ -40,6 +39,8 @@ class LaunchViewModel {
             
             networkProvider.getAirPorts(offset: offSet, completion: { [weak self ](result) in
                 guard let strongSelf = self else { return }
+                
+                strongSelf.isGetingData = true
                 
                 switch result {
                 case .success(let jsonData):
@@ -90,16 +91,12 @@ class LaunchViewModel {
                     
                     if totalCount > strongSelf.offSet {
                         strongSelf.offSet += 100
-                        if strongSelf.offSet < totalCount {
-                            strongSelf.getAirportsData()
-                        }else {
-                            strongSelf.dataIsLoaded?()
+                        if strongSelf.offSet > totalCount {
+                            strongSelf.isGetingData = false
                         }
+                        strongSelf.getAirportsData()
+                        
                     }
-                    
-                    
-                    
-                    break
                 default:
                     break
                 }
@@ -108,27 +105,8 @@ class LaunchViewModel {
             getAccesToken {
                 self.getAirportsData()
             }
-            
         }
-        
-        
     }
     
-    func getAccesToken(completion: @escaping (()->())) {
-        networkProvider.getAccesToken { (response) in
-            switch response {
-            case .success(let jsonData):
-                let jsonDecoder = JSONDecoder()
-                let authResponse: Auth = try! jsonDecoder.decode(RawAuth.self, from: jsonData!.data)
-                let authCache = AuthRealm()
-                authCache.accesToken = authResponse.access_token
-                RealmManager.shared.addObject(object: authCache, update: true)
-            case .notConnectedToInternet:
-                break
-            case .failure:
-                break
-            }
-            completion()
-        }
-    }
+    
 }

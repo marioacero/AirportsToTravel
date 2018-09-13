@@ -15,6 +15,8 @@ class EnvironmentConfiguration {
         static let ApiKey = "api-key"
         static let SecretKey = "client_secret"
         static let EnvironmentsFile = "Environments"
+        static let googleApi = "google-api"
+        static let mapsKey = "maps-key"
     }
     
     var configurationPath : String!
@@ -62,6 +64,24 @@ class EnvironmentConfiguration {
         let servicesKeysCount = sharedConfiguration.servicesKeys.allKeys.count
         if servicesKeysCount != 0 {
             return sharedConfiguration.servicesKeys.object(forKey: EnvironmentConstants.SecretKey) as? String
+        }
+        return nil
+    }
+    
+    func googleAPI()-> String? {
+        let sharedConfiguration = EnvironmentConfiguration.shared
+        let servicesKeysCount = sharedConfiguration.servicesKeys.allKeys.count
+        if servicesKeysCount != 0 {
+            return sharedConfiguration.servicesKeys.object(forKey: EnvironmentConstants.googleApi) as? String
+        }
+        return nil
+    }
+    
+    func mapsKey()-> String? {
+        let sharedConfiguration = EnvironmentConfiguration.shared
+        let servicesKeysCount = sharedConfiguration.servicesKeys.allKeys.count
+        if servicesKeysCount != 0 {
+            return sharedConfiguration.servicesKeys.object(forKey: EnvironmentConstants.mapsKey) as? String
         }
         return nil
     }

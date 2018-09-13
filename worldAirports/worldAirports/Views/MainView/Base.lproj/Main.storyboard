@@ -73,14 +73,14 @@
                     <navigationItem key="navigationItem" id="uFo-Db-YPG"/>
                     <connections>
                         <outlet property="progressBar" destination="pAD-e0-zuj" id="7OJ-cY-OTJ"/>
-                        <segue destination="EDO-Zs-bos" kind="show" identifier="goToSearchAirport" id="H9b-Z3-epg"/>
+                        <segue destination="KRA-Co-sCv" kind="show" identifier="goToSearchAirport" id="H9b-Z3-epg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="972" y="32.833583208395808"/>
         </scene>
-        <!--Air Ports Search View Controller-->
+        <!--Choose Your Travel-->
         <scene sceneID="KvB-IS-yId">
             <objects>
                 <viewController id="EDO-Zs-bos" customClass="AirPortsSearchViewController" customModule="worldAirports" customModuleProvider="target" sceneMemberID="viewController">
@@ -88,17 +88,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose your Travel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zMu-l4-cNa">
-                                <rect key="frame" x="114" y="44" width="147" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="t3Z-y5-q3V"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Depart:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vKH-xe-tY3">
-                                <rect key="frame" x="16" y="105" width="58" height="21"/>
+                                <rect key="frame" x="16" y="114" width="58" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="58" id="40V-I2-YzW"/>
                                     <constraint firstAttribute="height" constant="21" id="61W-b8-tMd"/>
@@ -108,7 +99,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Arrive" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UYd-Tk-OzT">
-                                <rect key="frame" x="16" y="187" width="46" height="21"/>
+                                <rect key="frame" x="16" y="196" width="46" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="46" id="KRA-Ug-ldO"/>
                                     <constraint firstAttribute="height" constant="21" id="Lls-J8-wv0"/>
@@ -118,7 +109,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QWk-1P-qys">
-                                <rect key="frame" x="16" y="129" width="343" height="45"/>
+                                <rect key="frame" x="16" y="138" width="343" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="nrn-x3-ryb"/>
                                 </constraints>
@@ -131,7 +122,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="i0c-CN-egf">
-                                <rect key="frame" x="16" y="216" width="343" height="45"/>
+                                <rect key="frame" x="16" y="225" width="343" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="Jai-ib-oaY"/>
                                 </constraints>
@@ -168,12 +159,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="i0c-CN-egf" firstAttribute="top" secondItem="UYd-Tk-OzT" secondAttribute="bottom" constant="8" id="5dy-Nz-wgm"/>
-                            <constraint firstItem="zMu-l4-cNa" firstAttribute="top" secondItem="qOu-fk-7Wf" secondAttribute="top" constant="24" id="5y2-bx-AOO"/>
                             <constraint firstItem="qOu-fk-7Wf" firstAttribute="trailing" secondItem="HRl-3l-JGs" secondAttribute="trailing" constant="16" id="74f-Lv-4bI"/>
                             <constraint firstItem="qOu-fk-7Wf" firstAttribute="trailing" secondItem="QWk-1P-qys" secondAttribute="trailing" constant="16" id="Afe-HC-0NJ"/>
                             <constraint firstItem="QWk-1P-qys" firstAttribute="top" secondItem="vKH-xe-tY3" secondAttribute="bottom" constant="3" id="BAR-Wq-Z0X"/>
                             <constraint firstItem="qOu-fk-7Wf" firstAttribute="trailing" secondItem="4Oe-XJ-tTP" secondAttribute="trailing" constant="37" id="EsD-Qb-Zft"/>
-                            <constraint firstItem="zMu-l4-cNa" firstAttribute="centerX" secondItem="ujg-Kd-bqb" secondAttribute="centerX" id="GWg-hE-xVI"/>
                             <constraint firstItem="qOu-fk-7Wf" firstAttribute="bottom" secondItem="4Oe-XJ-tTP" secondAttribute="bottom" constant="38" id="P4Q-2r-wTA"/>
                             <constraint firstItem="UYd-Tk-OzT" firstAttribute="leading" secondItem="qOu-fk-7Wf" secondAttribute="leading" constant="16" id="QxA-yB-gND"/>
                             <constraint firstItem="UYd-Tk-OzT" firstAttribute="top" secondItem="QWk-1P-qys" secondAttribute="bottom" constant="13" id="aqn-T8-Awl"/>
@@ -182,11 +171,12 @@
                             <constraint firstItem="vKH-xe-tY3" firstAttribute="leading" secondItem="qOu-fk-7Wf" secondAttribute="leading" constant="16" id="gXB-se-cOF"/>
                             <constraint firstItem="HRl-3l-JGs" firstAttribute="leading" secondItem="qOu-fk-7Wf" secondAttribute="leading" constant="16" id="hhI-i7-QWP"/>
                             <constraint firstItem="qOu-fk-7Wf" firstAttribute="bottom" secondItem="HRl-3l-JGs" secondAttribute="bottom" constant="20" id="k7d-QF-HM0"/>
-                            <constraint firstItem="vKH-xe-tY3" firstAttribute="top" secondItem="qOu-fk-7Wf" secondAttribute="top" constant="85" id="k9d-eT-Dtx"/>
+                            <constraint firstItem="vKH-xe-tY3" firstAttribute="top" secondItem="qOu-fk-7Wf" secondAttribute="top" constant="50" id="k9d-eT-Dtx"/>
                             <constraint firstItem="qOu-fk-7Wf" firstAttribute="trailing" secondItem="i0c-CN-egf" secondAttribute="trailing" constant="16" id="vfx-mg-nFh"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qOu-fk-7Wf"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Choose Your Travel" id="GNF-qC-eDZ"/>
                     <connections>
                         <outlet property="activity" destination="4Oe-XJ-tTP" id="5jj-3y-qlK"/>
                         <outlet property="arriveTextField" destination="i0c-CN-egf" id="0h2-Mu-JfD"/>
@@ -197,7 +187,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h5a-ig-PdK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1716" y="38.23088455772114"/>
+            <point key="canvasLocation" x="2655.1999999999998" y="38.23088455772114"/>
         </scene>
         <!--Schedules View Controller-->
         <scene sceneID="JzP-q6-pWn">
@@ -208,8 +198,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BFC-8C-5be">
-                                <rect key="frame" x="0.0" y="20" width="375" height="627"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="583"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="0rW-jN-j8G" id="fa9-Vw-rSS"/>
+                                    <outlet property="delegate" destination="0rW-jN-j8G" id="Ku3-Al-ZfV"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -221,10 +215,29 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="sHE-8O-hXF"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="BFC-8C-5be" id="ATm-nJ-gQ2"/>
+                        <segue destination="4BO-6O-wSj" kind="show" identifier="goToMaps" id="g72-Wn-fC1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bOc-ak-eVN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2429.5999999999999" y="37.331334332833585"/>
+            <point key="canvasLocation" x="3482" y="38"/>
+        </scene>
+        <!--Today-->
+        <scene sceneID="1AC-P4-F9q">
+            <objects>
+                <viewController title="Today" id="4BO-6O-wSj" customClass="MapsViewController" customModule="worldAirports" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="81O-IM-WyU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="i1s-xX-lR4"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dfo-sW-jDT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4322" y="41"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="hpK-MF-DmV">
@@ -243,6 +256,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JbP-XU-Dtf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="32.799999999999997" y="32.833583208395808"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="S94-4v-Brf">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="KRA-Co-sCv" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="kPy-Zq-rqW">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="EDO-Zs-bos" kind="relationship" relationship="rootViewController" id="cc7-xT-hqv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Fw-Tq-bMH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1716" y="38.23088455772114"/>
         </scene>
     </scenes>
     <resources>
